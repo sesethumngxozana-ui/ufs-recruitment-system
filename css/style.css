@@ -53,10 +53,12 @@ header{
 section{
     margin-bottom: 50px;
 }
-div{
+.wrapper{
     margin-left: 150px;
     margin-right: 150px;
 }
+
+
 header img{
     width: 200px;
     height: 100px;
@@ -72,11 +74,19 @@ margin-block: 50px;
 .blue-text{
     color: rgb(3, 63, 141);
 }
+ul li::marker{content: '';}
 
 #what-is-bouldering{
     width: 400px;
     height: 300px;
     margin-left: 20px;
 display: block;
+}
+.climber{
+    background-image: url(../images/simple-steps.jpg);
+    border: solid rgb(3, 63, 141) 5px;
+    padding: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
