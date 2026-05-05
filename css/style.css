@@ -31,10 +31,11 @@ a:active{
 }
 
 img{
-    margin-block: 50px;
-    width: 1000px;
-    height: 300px;
-   
+   /* margin-block: 50px;
+    width: 1000px; "dont set this the image might get larger and image lose quality"
+    height: 300px;*/
+max-inline-size: 100%;
+display: block;
 }
 footer{
     background-color: rgb(15, 78, 114);
@@ -51,13 +52,23 @@ header{
     justify-content: center;
 }
 section{
-    margin-bottom: 50px;
+    margin-block: 50px;
+}
+.primary-navigation ul {
+    list-style: none;
 }
 .wrapper{
-    margin-left: 150px;
-    margin-right: 150px;
+    /*margin-left: 150px;*/
+    /*margin-right: 150px;*/
+    border: 5px;
+    max-inline-size: 1000px;
+    margin-inline: auto;
 }
-
+.two-column-layout{
+    display: grid;
+    gap: 60px;
+    grid-template-columns: 1fr 1fr ;
+}
 
 header img{
     width: 200px;
@@ -74,19 +85,21 @@ margin-block: 50px;
 .blue-text{
     color: rgb(3, 63, 141);
 }
-ul li::marker{content: '';}
 
-#what-is-bouldering{
+/*ul li::marker{content: '';} "styling lists"*/
+
+/*#what-is-bouldering{
     width: 400px;
     height: 300px;
     margin-left: 20px;
 display: block;
-}
+}*/
 .climber{
     background-image: url(../images/simple-steps.jpg);
     border: solid rgb(3, 63, 141) 5px;
-    padding: 100px;
+    padding: 50px;
     background-size: cover;
     background-repeat: no-repeat;
+    color: rgb(232, 242, 251);
 }
 
