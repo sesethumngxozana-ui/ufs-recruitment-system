@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bouldering-Form</title>
+    <link href="css/style.css" rel="stylesheet" />
+</head>
+    <body class="form-page">
+        <div class="wrapper"> 
+            <header>
+                <!--logo here-->
+             <img src="images/logo.svg" alt="logo" />
+
+                <nav class="primary-navigation" arial-label="Primary Navigation">
+                  <ul>
+                        <li><a href="index.html" >Home</a></li> 
+                        <li><a href="getting-started.html">Getting Started</a></li>
+                        <li><a href="form.html">Form</a></li>
+                  </ul>
+
+                </nav>
+            </header>
+            <main>
+                <h1>Join our Bouldering <span class="blue-text">Community</span></h1>
+               <form action="submit-form.php" method="post">
+                    <section>
+                      <fieldset>
+                        <legend>Contact details</legend>
+                        <label for="name">Full Name: (required)</label>
+                        <input type="text" id="name" name="name" required><br/>
+
+                        <label for="email">Email: (required)</label>
+                        <input type="email" id="email" name="email" required><br/>
+
+                        <label for="number">Phone number:</label>
+                        <input type="tel" id="number" name="number" min-length="10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="064-456-7890" required><br/>
+
+                        <label for="address">Address:(optional)</label>
+                        <input type="text" id="address" name="address"><br/>
+                        </fieldset>
+                    </section>
+
+                    <section>
+                      <fieldset>
+                        <legend>First climbing experience</legend>
+                        <label for="experience">Have you ever climbed before?</label>
+                        <input id="yes-option" type="radio" name="hotel-stay" value="yes" />
+                                <label for="yes-option">Yes</label>
+                                <input id="no-option" type="radio" name="hotel-stay" value="no" />
+                                <label for="no-option">No</label>
+                        </select><br/>
+
+                        <label for="frequency">How often do you climb?</label>
+                        <select id="frequency" name="frequency" required>
+                            <option value="">Select an option</option>
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                            <option value="monthly">Monthly</option>
+                            <option value="rarely">Rarely</option>
+                        </select><br/>
+                     </fieldset>
+                    </section>
+
+                    <section>
+                        <fieldset>
+                        <legend>How did you hear about us?</legend>
+
+                            <input type="checkbox" id="ads" name="choice" value="ads" />
+                                <label for="ads">Advertisements</label><br/>
+                                <input type="checkbox" id="friend" name="choice" value="friend" />
+
+                                <label for="friend">Friend</label><br/>
+                                <input type="checkbox" id="recommendation" name="choice" value="recommendation" />
+
+                                <label for="recommendation">Recommendation</label><br/>
+                                <input type="checkbox" id="other" name="choice" value="other" />
+                                <label for="other">Other</label><br/>
+                        </fieldset>
+                    </section>
+
+                        <label for="message">Message:</label>
+                        <textarea id="message" cols="30" rows="10" name="message" required></textarea><br/>
+
+                        <button type="submit">Submit</button>
+                </form>
+            </main>
+        </div>
+    </body>    
+</html>
