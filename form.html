@@ -54,7 +54,7 @@
                         <select id="frequency" name="frequency" required>
                             <option value="">Select an option</option>
                             <option value="daily">Daily</option>
-                            <option value="weekly">Weekly</option>
+                            <option value="weekly">Weekly</option>  
                             <option value="monthly">Monthly</option>
                             <option value="rarely">Rarely</option>
                         </select><br/>
@@ -65,16 +65,22 @@
                         <fieldset>
                         <legend>How did you hear about us?</legend>
 
-                            <input type="checkbox" id="ads" name="choice" value="ads" />
-                                <label for="ads">Advertisements</label><br/>
-                                <input type="checkbox" id="friend" name="choice" value="friend" />
+                        <label for="ads">Advertisements</label><br/>
+                        <input type="checkbox" id="ads" name="choice" value="ads" />
 
-                                <label for="friend">Friend</label><br/>
-                                <input type="checkbox" id="recommendation" name="choice" value="recommendation" />
+                        <label for="social-media">Social Media</label><br/>
+                        <input type="checkbox" id="social-media" name="choice" value="social-media" />
 
-                                <label for="recommendation">Recommendation</label><br/>
-                                <input type="checkbox" id="other" name="choice" value="other" />
-                                <label for="other">Other</label><br/>
+                        <label for="friend">Friend</label><br/>
+                        <input type="checkbox" id="friend" name="choice" value="friend" />
+
+                        <label for="recommendation">Recommendation</label><br/>
+                        <input type="checkbox" id="recommendation" name="choice" value="recommendation" />
+
+                        <label for="other">Other</label><br/>
+                        <input type="checkbox" id="other" name="choice" value="other" />
+                        <input type="text" id="other-source" name="other-source"><br/>
+                        <p>If you selected "Other", please specify:</p>
                         </fieldset>
                     </section>
 
