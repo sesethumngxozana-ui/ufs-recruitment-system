@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-Body{
+body{
     font-family: Arial, sans-serif;
   line-height: 1.6;
    
@@ -13,9 +13,12 @@ h1{
     text-align: center;
     font-size: 5rem;
     
-    @media (width > 720px){
-        font-size: 7.5rem;
     }
+    
+@media (width > 720px){
+   h1{
+      font-size: 7.5rem;
+   }
 }
 h2{
     color: rgb(255, 166, 0);
