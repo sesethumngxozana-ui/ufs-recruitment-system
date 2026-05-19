@@ -1,4 +1,68 @@
-<link rel="stylesheet" href="css/style.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+    <link href="css/style.css" rel="stylesheet"/>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <!--logo here-->
+         <img src="images/logo.svg" alt="logo" />
 
-<button class="regular-btn">Unstyled Button</button>
-<button class="round-btn">Round Button</button>
+            <nav class="primary-navigation" aria-label="Primary Navigation">
+              <ul>
+                    <li><a href="index.html" >Home</a></li> 
+                    <li><a href="getting-started.html">Getting Started</a></li>
+                     <li><a href="form.html">Form</a></li>
+                     <li><a href="contact.html">Contact</a></li>
+              </ul>
+
+            </nav>
+        </header>
+
+        <main>
+            <h1>Contact <span class="blue-text" >Us</span></h1>
+            <p>If you have any questions, suggestions, or just want to say hello, we'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
+
+            <form action="submit-contact.php" method="post">
+                <label for="name">Name:</label><br/>
+                <input type="text" id="name" name="name" required><br/><br/>
+
+                <label for="email">Email:</label><br/>
+                <input type="email" id="email" name="email" required><br/><br/>
+
+                <label for="message">Message:</label><br/>
+                <textarea id="message" name="message" rows="5" required></textarea><br/><br/>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <button class="regular-btn">Unstyled Button</button>
+            <button class="round-btn">Round Button</button>
+
+            <link rel="stylesheet" href="styles.css">
+
+            <div class="card">
+            <a href="#">
+                <img src="https://placehold.co/150x150" alt="Example Product Image">
+                <h2>Product Name</h2>
+                <button>Buy Now</button>
+            </a>
+            </div>
+            <!--the loading page -->
+            <div class="loading-indicator" style="display: none;">Loading...</div>
+
+            <button id="back-to-top" class="back-to-top">↑ Back to Top</button>
+
+            <social-media-icons class="social-media-icons">
+                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-icon.jfif" alt="Facebook"></a>
+                <a href="https://www.twitter.com" target="_blank"><img src="images/twitter-icon.jfif" alt="Twitter"></a>
+                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.jfif" alt="Instagram"></a>   
+            </social-media-icons>
+        </main>
+    </div>
+</body>
+</html>

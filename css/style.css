@@ -67,7 +67,7 @@ section{
     list-style: none;
     margin: 0;
     padding:0;
-
+    position: relative;
 }
 .primary-navigation a{
     color: black;
@@ -150,3 +150,97 @@ display: block;
   background-color: #27ae60;
   transform: translateY(-2px);
 }
+a:focus{outline:2px solid purple;}
+
+#theme-toggle{
+    position:fixed;
+    top: 40px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 140, 255);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: right;
+}
+/*card style for boulderin gear*/
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  width: 300px;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.card h2 {
+  font-size: 1.5em;
+  margin: 8px 0;
+}
+
+.card button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #0056b3;
+}
+
+/*loading page*/
+.loading-indicator {
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+/*social media icons*/
+.social-media-icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+  
+}
+.social-media-icons a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+.social-media-icons a:hover {
+  box-shadow: 0 4px 8px rgba(197, 13, 13, 0.2);
+}
+
