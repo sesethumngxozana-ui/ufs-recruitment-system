@@ -133,6 +133,10 @@ display: block;
     background-color: rgb(190, 189, 189);
     
 }
+input:focus {
+  border: 2px solid crimson;
+  outline: none;
+}
  
 .round-btn {
   font-size: 1rem;
