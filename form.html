@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Bouldering-Form</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="main.js"  defer></script>
 </head>
     <body class="form-page">
@@ -19,11 +20,11 @@
                         <li><a href="form.html">Form</a></li>
                          <li><a href="contact.html">Contact</a></li>
                   </ul>
+                <button id="theme-toggle">Light / Dark Mode</button>
 
                 </nav>
             </header>
             <main>
-                <button id="theme-toggle">Toggle Dark Mode</button>
 
                 <h1>Join our Bouldering <span class="blue-text">Community</span></h1>
                <form action="submit-form.php" method="post">
@@ -99,5 +100,7 @@
                   <p>©2025 Boulder inc. All rights reserved.</p>
               </footer>
         </div>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+         <script>AOS.init();</script>
     </body>    
 </html>

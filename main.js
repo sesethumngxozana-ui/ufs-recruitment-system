@@ -1,40 +1,51 @@
-document.getElementById('theme-toggle').addEventListener('click', () => {
-document.body.classList.toggle('dark');
-document.getElementById('theme-toggle').innerHTML = document.body.classList.contains('dark') ? 'Light Mode' : 'Dark Mode';
-document.querySelectorAll('.form-container, .form-container input, .form-container select, .form-container textarea').forEach(element => {
-  element.classList.toggle('dark');
-});
-});
-// Infinite scroll and back to top button
-const container = document.querySelector('.container'); 
+// ===== THEME TOGGLE =====
+const themeBtn = document.getElementById('theme-toggle');
 
-const loadingIndicator = document.querySelector('.loading-indicator');
+if (themeBtn) {
+    themeBtn.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        themeBtn.textContent = document.body.classList.contains('dark') 
+            ? 'Light Mode' 
+            : 'Dark Mode';
+    });
+}
+
+// ===== BACK TO TOP =====
 const backToTopBtn = document.getElementById('back-to-top');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 400) {
-    backToTopBtn.style.display = 'block';
-  } else {
-    backToTopBtn.style.display = 'none';
-  }
 
-  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
-    loadMorePosts();
-  }
+window.addEventListener('scroll', () => {
+    // Show back-to-top after scrolling 400px down
+    if (window.scrollY > 400) {
+        backToTopBtn.style.display = 'block';
+    } else {
+        backToTopBtn.style.display = 'none';
+    }
 });
 
 backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-function loadMorePosts() {
-  loadingIndicator.style.display = 'block';
-  setTimeout(() => {
-    for (let i = 0; i < 3; i++) {
-      const post = document.createElement('div');
-      post.className = 'post';
-      post.textContent = `Post ${container.children.length + 1}`;
-      container.appendChild(post);
-    }
-    loadingIndicator.style.display = 'none';
-  }, 1000);
+// ===== SLIDE-IN NAVIGATION =====
+const menuToggle = document.querySelector('.menu-toggle');
+const mainNav = document.getElementById('main-nav');
+const closeNav = document.querySelector('.close-nav');
+
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.add('open');
+    });
 }
+
+if (closeNav) {
+    closeNav.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+    });
+}
+
+// Close nav when a link is clicked (important for single page!)
+document.querySelectorAll('.primary-navigation a').forEach(link => {
+    link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+    });
+});

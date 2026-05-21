@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Contact Us</title>
     <link href="css/style.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <script src="main.js" defer></script>
 </head>
 <body>
@@ -24,26 +25,43 @@
         </header>
 
         <main>
-            <h1>Contact <span class="blue-text" >Us</span></h1>
-            <p>If you have any questions, suggestions, or just want to say hello, we'd love to hear from you! Please fill out the form below and we'll get back to you as soon as possible.</p>
+          <main>
+  <h1>Get In <span class="blue-text">Touch</span></h1>
+  <h3>We'd love to connect! Reach us through any of the platforms below.</h3>
 
-            <form action="submit-contact.php" method="post">
-                <label for="name">Name:</label><br/>
-                <input type="text" id="name" name="name" required><br/><br/>
+  <!-- Social media section with AOS animations -->
+  <section>
+    <h2>Find Us Online</h2>
+    <div class="social-links">
+       
+      <a href="https://wa.me/2764" target="_blank" class="social-card" data-aos="fade-up">
+        <img src="images/whatsapp.jfif" alt="WhatsApp" />
+        <span>WhatsApp us: 064 123 4567</span>
+      </a>
 
-                <label for="email">Email:</label><br/>
-                <input type="email" id="email" name="email" required><br/><br/>
+      <a href="https://facebook.com/yourpage" target="_blank" class="social-card" data-aos="fade-right" data-aos-delay="100">
+        <img src="images/facebook-icon.jfif" alt="Facebook" />
+        <span>Facebook</span>
+      </a>
+ 
 
-                <label for="message">Message:</label><br/>
-                <textarea id="message" name="message" rows="5" required></textarea><br/><br/>
+      <a href="https://instagram.com/yourpage" target="_blank" class="social-card" data-aos="fade-right" data-aos-delay="200">
+        <img src="images/instagram-icon.jfif" alt="Instagram" />
+        <span>Instagram</span>
+      </a>
 
-                <button type="submit">Send Message</button>
-            </form>
+      <a href="https://twitter.com/yourpage" target="_blank" class="social-card" data-aos="fade-right" data-aos-delay="300">
+        <img src="images/twitter-icon.jfif" alt="Twitter" />
+        <span>Twitter / X</span>
+      </a>
+     
+    </div>
+  </section>
 
-            <button class="regular-btn">Unstyled Button</button>
-            <button class="round-btn">Round Button</button>
-
-            <link rel="stylesheet" href="styles.css">
+  <!-- Gear cards section -->
+  <section>
+    <h2>Shop Bouldering Gear</h2>
+    <div class="cards-row">
 
             <div class="card">
             <a href="#">
@@ -52,17 +70,48 @@
                 <button>Buy Now</button>
             </a>
             </div>
-            <!--the loading page -->
-            <div class="loading-indicator" style="display: none;">Loading...</div>
 
-            <button id="back-to-top" class="back-to-top">↑ Back to Top</button>
+      <div class="card" data-aos="fade-up">
+        <img src="https://placehold.co/150x150" alt="Climbing Shoes" />
+        <h2>Climbing Shoes</h2>
+        <button>Buy Now</button>
+      </div>
 
-            <social-media-icons class="social-media-icons">
-                <a href="https://www.facebook.com" target="_blank"><img src="images/facebook-icon.jfif" alt="Facebook"></a>
-                <a href="https://www.twitter.com" target="_blank"><img src="images/twitter-icon.jfif" alt="Twitter"></a>
-                <a href="https://www.instagram.com" target="_blank"><img src="images/instagram-icon.jfif" alt="Instagram"></a>   
-            </social-media-icons>
-        </main>
+      <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <img src="https://placehold.co/150x150" alt="Chalk Bag" />
+        <h2>Chalk Bag</h2>
+        <button>Buy Now</button>
+      </div>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://placehold.co/150x150" alt="Crash Pad" />
+        <h2>Crash Pad</h2>
+        <button>Buy Now</button>
+      </div>
+
+       <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://placehold.co/150x150" alt="Crash Pad" />
+        <h2>Crash Pad</h2>
+        <button>Buy Now</button>
+      </div>
+
+       <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <img src="https://placehold.co/150x150" alt="Crash Pad" />
+        <h2>Crash Pad</h2>
+        <button>Buy Now</button>
+      </div>
+
+      <a href="https://www.google.com/shopping?num=12&sca_esv=5d2af034129297de&sxsrf=ANbL-n7ruwZxct3aVRc8h0XbN6FfA8E-0g:1779184138799&udm=28&ictx=111&biw=1366&bih=641&dpr=1&sa=X&ved=0ahUKEwiwnuSbnsqUAxVM6MkDHdauM7oQ0rsNCBc">
+        <h3>See all products </h3>
+      </a>
+
     </div>
+  </section>
+
+  <button id="back-to-top" class="back-to-top">↑ Back to Top</button>
+</main>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>

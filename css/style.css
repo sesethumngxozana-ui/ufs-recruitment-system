@@ -1,14 +1,20 @@
+ html {
+    scroll-behavior: smooth;
+}
+ 
  * {
     box-sizing: border-box;
 }
 
 body{
+  margin: 0;
+  padding: 0;
     font-family: Arial, sans-serif;
   line-height: 1.6;
    
 }
 h1{
-    color:black;
+    color:darkgray;
     line-height: 1;
     text-align: center;
     font-size: 5rem;
@@ -43,6 +49,10 @@ img{
     height: 300px;*/
 max-inline-size: 100%;
 display: block;
+border-radius: 10px;
+}
+.second-column img{
+    height: 300px;
 }
 footer{
     background-color: rgb(15, 78, 114);
@@ -57,10 +67,24 @@ footer{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    z-index: 100;
+    box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 section{
     margin-block: 50px;
 }
+
+.primary-navigation {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
 .primary-navigation ul {
     display: flex;
     gap: 20px;
@@ -157,9 +181,7 @@ input:focus {
 a:focus{outline:2px solid purple;}
 
 #theme-toggle{
-    position:fixed;
-    top: 40px;
-    right: 20px;
+    position:relative;
     padding: 10px 20px;
     background-color: rgb(0, 140, 255);
     color: white;
@@ -168,12 +190,51 @@ a:focus{outline:2px solid purple;}
     cursor: pointer;
     align-items: right;
 }
-/*card style for boulderin gear*/
+
+/* Social cards layout */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+}
+
+.social-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: box-shadow 0.3s ease;
+}
+
+.social-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 140, 255, 0.3);
+    border-color: rgb(0, 140, 255);
+}
+
+.social-card img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Row of gear cards */
+.cards-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* wraps to next line on small screens */
+}
+/*the first gear card*/
 .card {
   border: 1px solid #ccc;
   padding: 16px;
   width: 300px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .card:hover {
@@ -201,23 +262,20 @@ a:focus{outline:2px solid purple;}
   padding: 10px 16px;
   border: none;
   cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .card button:hover {
   background-color: #0056b3;
 }
 
-/*loading page*/
-.loading-indicator {
-  margin-top: 12px;
-  font-weight: bold;
-}
-
+/*back-to-top button*/
 .back-to-top {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  display: none;
+  display: absolute;
   padding: 10px 15px;
   background-color: #007BFF;
   color: white;
@@ -231,20 +289,46 @@ a:focus{outline:2px solid purple;}
 .back-to-top:hover {
   background-color: #0056b3;
 }
-/*social media icons*/
-.social-media-icons {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 30px;
-  
-}
-.social-media-icons a {
-  color: #333;
-  font-size: 24px;
-  text-decoration: none;
-}
-.social-media-icons a:hover {
-  box-shadow: 0 4px 8px rgba(197, 13, 13, 0.2);
+
+/*dark mode*/
+/* Dark mode styles */
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
+body.dark header {
+    background-color: #1e1e1e;
+}
+
+body.dark .primary-navigation a {
+    color: #e0e0e0;
+}
+
+body.dark footer {
+    background-color: #1a1a2e;
+}
+
+body.dark .card {
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #e0e0e0;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background-color: #2a2a2a;
+    color: #e0e0e0;
+    border: 1px solid #555;
+}
+
+body.dark .border-bg {
+    background-color: #1a3a4a;
+}
+
+body.dark .social-card{
+    background-color: #1e1e1e;
+    border-color: #444;
+    color: #e0e0e0;
+}

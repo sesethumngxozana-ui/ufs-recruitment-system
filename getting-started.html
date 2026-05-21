@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Bouldering Guide</title>
     <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
     <body>
         <div class="wrapper">
@@ -25,7 +26,7 @@
             <main>
             <!--I can only use one h1 per page and I have to use it for the title of the page. --->
             <h1>Getting Started with <span class="blue-text"> Bouldering</span></h1>
-     <section>
+            <section>
             <h2 class="blue-text">How to get started</h2>
             <p>Unlike many outdoor sports, getting started with <a href="index.html">bouldering is surprisingly simple</a>. All you need are some climbing shoes, chalk, and a positive attitude—most gyms even rent the equipment for your first sessions.<strong> No prior experience or complex gear required!</strong></p>
             <section>
@@ -47,9 +48,9 @@
                         </div>
                 </div>
             </section>
-            <img src="images/getting-started-outdoors.jpg" alt="Person learning to boulder." />
     </section>
-     <section>
+     <section class="second-column">
+     <h3 class="blue-text">Watch Our Bouldering Tutorial</h3>
       <!---- <iframe 
             width="400" 
             height="300"
@@ -59,15 +60,19 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen>
         </iframe>-->
-       <h3 class="blue-text">Watch Our Bouldering Tutorial</h3>
+       <div class="two-column-layout" >
+        <img src="images/getting-started-outdoors.jpg" alt="Person learning to boulder." data-aos="fade-right"/>
         <video controls
             width="400"
-            height="300">
+            height="300"
+            data-aos="fade-left" data-aos-delay="200">
             <source src="images/bouldering-vid.mp4" type="video/mp4">
             
         </video>
-        <h3>Ready to take the leap? Find a gym, grab some shoes, and <a href="form.html">start climbing today!</a></h3>
+        </div>
       </section>
+        <h3>Ready to take the leap? Find a gym, grab some shoes, and <a href="form.html">start climbing today!</a></h3>
+
             </main>
             
             <footer class="border-bg">
@@ -75,5 +80,7 @@
             </footer>
         </div>
         <script src="main.js"></script>
+         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+         <script>AOS.init();</script>
     </body>
 </html>
