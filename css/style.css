@@ -60,6 +60,7 @@ footer{
     text-align: center;
     padding: 20px;
     border: 5px solid rgb(3, 63, 141);
+    border-radius: 10px;
     }
 /*#discover{
     margin-top: 50px;
@@ -68,8 +69,6 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
     background-color: rgb(255, 255, 255);
     padding: 10px 20px;
     z-index: 100;
@@ -153,7 +152,7 @@ display: block;
     background-repeat: no-repeat;
     color: rgb(232, 242, 251);
 }
-.form-page main{
+form{
     background-color: rgb(190, 189, 189);
     
 }
@@ -189,6 +188,24 @@ a:focus{outline:2px solid purple;}
     border-radius: 5px;
     cursor: pointer;
     align-items: right;
+}
+p q{
+    font-style: italic;
+    color: rgb(3, 63, 141);
+    border-left: 4px solid rgb(0, 140, 255);
+    padding-left: 15px;
+    margin-left: 0;
+    margin-block: 20px;
+transform: rotate(7deg);
+}
+blockquote p{
+    font-style: italic;
+    color: rgb(3, 63, 141);
+    border-left: 4px solid rgb(0, 140, 255);
+    padding-left: 15px;
+    margin-left: 0;
+    margin-block: 20px; 
+transform: skew(7deg);
 }
 
 /* Social cards layout */
@@ -238,8 +255,9 @@ a:focus{outline:2px solid purple;}
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .card a {
   text-decoration: none;
@@ -331,4 +349,39 @@ body.dark .social-card{
     background-color: #1e1e1e;
     border-color: #444;
     color: #e0e0e0;
+}
+
+/*form container*/
+.container {
+    background-color: #ffffff1a;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px black;  
+}
+
+.center {
+  text-align: center;
+}
+
+.description {
+  font-size: 1.2rem;
+}
+
+fieldset {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 20px;
+}
+
+fieldset legend {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+label {
+  font-size: 1.2rem;
 }
