@@ -21,10 +21,10 @@ h1{
     
     }
     
-@media (width > 720px){
+    @media (width > 720px){
    h1{
-      font-size: 7.5rem;
-   }
+        font-size: 7.5rem;
+    }
 }
 h2{
     color: rgb(255, 166, 0);
@@ -73,9 +73,12 @@ header{
     padding: 10px 20px;
     z-index: 100;
     box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
 }
-section{
+section[id]{
     margin-block: 50px;
+    scroll-margin-top: 140px;
 }
 
 .primary-navigation {
@@ -90,7 +93,7 @@ section{
     list-style: none;
     margin: 0;
     padding:0;
-    position: relative;
+    position: sticky;
 }
 .primary-navigation a{
     color: black;
@@ -138,12 +141,11 @@ margin-block: 50px;
 
 /*ul li::marker{content: '';} "styling lists"*/
 
-/*#what-is-bouldering{
-    width: 400px;
-    height: 300px;
-    margin-left: 20px;
-display: block;
-}*/
+#what-is-bouldering{
+    margin-top:10px;
+   
+    display: block;
+}
 .climber{
     background-image: url(../images/simple-steps.jpg);
     border: solid rgb(3, 63, 141) 5px;
@@ -154,14 +156,51 @@ display: block;
 }
 form{
     background-color: rgb(190, 189, 189);
+    border-radius: 5px;
     
+}
+.submit-btn{cursor: pointer;
+background-color: royalblue;
+color:whitesmoke;
+border:none; 
+border-radius:6px;
+padding: 12px 20px;
+font-size:1.1rem; 
+display:block;
+margin: auto;
+}
+.submit-btn:hover{
+  background-color:midnightblue;
 }
 input:focus {
   border: 2px solid crimson;
   outline: none;
 }
+
+input:where(#yes-option, #no-option){
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid gray;
+  vertical-align: top;
+}
+input:where(#yes-option, #no-option)::before{
+    display: block;
+  content: " ";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(3px, 3px) scale(0);
+  transition: all 0.3s ease-in;
+}
+input:where(#yes-option, #no-option):checked::before{
+    transform: translate(3px, 3px) scale(1);
+background-color: rgb(30, 97, 243);
+}
+
  
-.round-btn {
+/*.round-btn {
   font-size: 1rem;
   font-family: 'Segoe UI', sans-serif;
   border: none;
@@ -176,7 +215,7 @@ input:focus {
 .round-btn:hover {
   background-color: #27ae60;
   transform: translateY(-2px);
-}
+}*/
 a:focus{outline:2px solid purple;}
 
 #theme-toggle{
@@ -188,6 +227,9 @@ a:focus{outline:2px solid purple;}
     border-radius: 5px;
     cursor: pointer;
     align-items: right;
+}
+#theme-toggle:hover{
+    background-color: midnightblue;
 }
 p q{
     font-style: italic;
@@ -237,6 +279,7 @@ transform: skew(7deg);
 .social-card img {
     width: 40px;
     height: 40px;
+   
 }
 
 /* Row of gear cards */
@@ -285,7 +328,7 @@ transform: skew(7deg);
 }
 
 .card button:hover {
-  background-color: #0056b3;
+  background-color: midnightblue;
 }
 
 /*back-to-top button*/
@@ -305,7 +348,7 @@ transform: skew(7deg);
 }
 
 .back-to-top:hover {
-  background-color: #0056b3;
+  background-color:midnightblue;
 }
 
 /*dark mode*/
