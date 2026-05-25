@@ -5,8 +5,8 @@ if (themeBtn) {
     themeBtn.addEventListener('click', () => {
         document.body.classList.toggle('dark');
         themeBtn.textContent = document.body.classList.contains('dark') 
-            ? 'Light Mode' 
-            : 'Dark Mode';
+            ? 'Switch to Light Mode' 
+            : 'Switch to Dark Mode';
     });
 }
 
@@ -48,4 +48,20 @@ document.querySelectorAll('.primary-navigation a').forEach(link => {
     link.addEventListener('click', () => {
         mainNav.classList.remove('open');
     });
+});
+
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+
+    if(window.scrollY > 50){
+
+        header.classList.add('scrolled');
+
+    } else {
+
+        header.classList.remove('scrolled');
+
+    }
+
 });

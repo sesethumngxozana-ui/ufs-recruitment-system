@@ -11,14 +11,15 @@
     <div class="wrapper">
         <header>
             <img src="images/logo.svg" alt="logo" />
-            <button class="menu-toggle" aria-label="Open menu">☰</button>
+            <!-- <button class="menu-toggle" aria-label="Open menu">☰</button> -->
             <nav class="primary-navigation" id="main-nav" aria-label="Primary Navigation">
-                <button class="close-nav" aria-label="Close menu">✕</button>
+                <!-- <button class="close-nav" aria-label="Close menu">✕</button> -->
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#getting-started">Getting Started</a></li>
                     <li><a href="#form">Join Us</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#gear">Shop</a></li>
                 </ul>
                 <button id="theme-toggle">Light / Dark Mode</button>
             </nav>
@@ -210,6 +211,7 @@
                         <button  class="submit-btn" type="submit">Submit</button>
                 </form>
                </div>
+               </section>
               <hr>
 
             <!-- SECTION 4: CONTACT -->
@@ -249,68 +251,101 @@
   </section>
 
   <!-- Gear cards section -->
-  <section>
-    <h3>Shop Bouldering Gear</h3>
+  <section id="gear">
+    <h2>Shop Bouldering <span class="blue-text">Gear</span></h2>
     <div class="cards-row">
 
-            <div class="card">
+            <div class="card" data-aos="fade-up">
             <a href="#">
-                <img src="https://placehold.co/150x150" alt="Example Product Image">
-                <h2>Product Name</h2>
+                <img src="images/shopping1.webp" alt="Pandion Harness"/>
+                <h2>Petzl Pandion Harness</h2>
+                <p>A high-quality harness for bouldering and climbing.</p>
                 <button>Buy Now</button>
             </a>
             </div>
 
-      <div class="card" data-aos="fade-up">
-        <img src="https://placehold.co/150x150" alt="Climbing Shoes" />
-        <h2>Climbing Shoes</h2>
-        <button>Buy Now</button>
-      </div>
-
       <div class="card" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://placehold.co/150x150" alt="Chalk Bag" />
-        <h2>Chalk Bag</h2>
-        <button>Buy Now</button>
-      </div>
-
-      <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://placehold.co/150x150" alt="Crash Pad" />
-        <h2>Crash Pad</h2>
+        <img src="images/shopping2.webp" alt="Liquid Chalk for better grip" />
+        <h2>Beal Pure Liquid Chalk</h2>
+        <p>A high-quality chalk for better grip during climbing.</p>
         <button>Buy Now</button>
       </div>
 
        <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://placehold.co/150x150" alt="Crash Pad" />
-        <h2>Crash Pad</h2>
+        <img src="images/shopping6.webp" alt="Half Dome Helmet" />
+        <h2>Half Dome Helmet</h2>
+        <p>A durable and safe helmet for climbing and bouldering.</p>
         <button>Buy Now</button>
       </div>
 
-       <div class="card" data-aos="fade-up" data-aos-delay="200">
-        <img src="https://placehold.co/150x150" alt="Crash Pad" />
-        <h2>Crash Pad</h2>
+
+      <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/shopping4.webp" alt="Climbing Shoes" />
+        <h2>SCARPA Climbing Shoes</h2>
+        <p>High-performance climbing shoes for superior grip and comfort.</p>
         <button>Buy Now</button>
       </div>
 
-      <a href="https://www.google.com/shopping?num=12&sca_esv=5d2af034129297de&sxsrf=ANbL-n7ruwZxct3aVRc8h0XbN6FfA8E-0g:1779184138799&udm=28&ictx=111&biw=1366&bih=641&dpr=1&sa=X&ved=0ahUKEwiwnuSbnsqUAxVM6MkDHdauM7oQ0rsNCBc">
+       <div class="card" data-aos="fade-up" data-aos-delay="400">
+        <img src="images/shopping5.webp" alt="Black Diamond C4 Camalot" />
+        <h2>Black Diamond C4 Camalot</h2>
+        <p>A versatile and reliable cam for various rock types.</p>
+        <button>Buy Now</button>
+      </div>
+
+       <div class="card" data-aos="fade-up" data-aos-delay="500">
+        <img src="images/shopping3.webp" alt="Chalk Bag" />
+        <h2>Black Diamond Chalk Bag</h2>
+        <p>A chalk bag for easy access to chalk while climbing.</p>
+        <button>Buy Now</button>
+      </div>
+
+      <a href="https://www.google.com/shopping?num=12&sca_esv=5d2af034129297de&sxsrf=ANbL-n7ruwZxct3aVRc8h0XbN6FfA8E-0g:1779184138799&udm=28&ictx=111&biw=1366&bih=641&dpr=1&sa=X&ved=0ahUKEwiwnuSbnsqUAxVM6MkDHdauM7oQ0rsNCBc" target="_blank">
         <h3>See all products </h3>
       </a>
 
     </div>
   </section>
 
-            </section>
+   <button id="back-to-top" class="back-to-top">↑ Back to Top</button>
   </main>
 
-  <footer class="border-bg">
-    <p>©2025 Boulder inc. All rights reserved.</p>
+  <section class="location">
+    <h2>Our Location</h2>
+    <p>123 Boulder Street, Gauteng City, South Africa</p>
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.086441678714!2d-122.4194150846818!3d37.77492977975971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5b5b5%3A0x123456789abcdef0!2sBoulder%20Inc.!5e0!3m2!1sen!2sus!4v1610000000000" 
+        width="600" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+    </iframe>
+ <footer class="border-bg">
+  <section class="contact-info">
+  <div class="two-column-layout">
+    
+  <section >
+  <h2>Contact Us</h2>
+  <p>Email: climb@boulder.com</p>
+  <p>Phone: +27 64 456 7890</p>
+  </section>
+
+  <div class="location">
+    <h2>Visit Us</h2>
+    <p>Address: 123 Boulder Street, Gauteng City, South Africa</p>
+    <p>Hours: Mon-Fri 9am-9pm, Sat-Sun 10am-6pm</p>
+  </div>
+  
+   </div>
+  </section> 
+   <p>©2025 Boulder inc. All rights reserved.</p>
   </footer>
-    </div>
 
-    <!-- <button id="theme-toggle">Toggle Dark Mode</button> -->
-    <button id="back-to-top" class="back-to-top">↑ Back to Top</button>
-
-    <script src="main.js"></script>
+  
+  </section>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>AOS.init();</script>
+   <script src="main.js"></script>
 </body>
 </html>

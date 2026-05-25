@@ -69,12 +69,22 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    padding: 10px 20px;
+    background:transparent;
+    padding: 20px 20px;
     z-index: 100;
-    box-shadow: 0 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow:none;
     position: sticky;
     top: 0;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease,
+        padding 0.3s ease;
+}
+header.scrolled {
+    background-color: rgb(255, 255,225,0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
 }
 section[id]{
     margin-block: 50px;
@@ -114,14 +124,15 @@ section[id]{
 .two-column-layout{
     display: grid;
     gap: 60px;
-    grid-template-columns: 1fr 1fr ;
-
+    /*grid-template-columns: 1fr 1fr ;*/
+}
 
     @media (width > 600px){
-grid-template-columns: 1fr 1fr;
- }
+        .two-column-layout{
+        grid-template-columns: 1fr 1fr;
+        }
+    }
 
-}
 
 header img{
     width: 200px;
@@ -336,7 +347,7 @@ transform: skew(7deg);
   position: fixed;
   bottom: 30px;
   right: 30px;
-  display: absolute;
+  display: none;
   padding: 10px 15px;
   background-color: #007BFF;
   color: white;
@@ -394,6 +405,7 @@ body.dark .social-card{
     color: #e0e0e0;
 }
 
+
 /*form container*/
 .container {
     background-color: #ffffff1a;
@@ -427,4 +439,15 @@ fieldset legend {
 
 label {
   font-size: 1.2rem;
+}
+.contact-info {
+    background-color: rgb(15, 78, 114);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.location {
+   text-align:center;
 }
