@@ -57,5 +57,5 @@ built as a front-end development project.
 
 ## Author
 **Sesethu Mngxozana** — CIS Graduate | Front-End Developer  
-[LinkedIn](https://linkedin.com/in/sesethu-mngxozana-88b97528b) · 
+[LinkedIn](https://www.linkedin.com/in/sesethu-mngxozana-88b97528b·) 
 [GitHub](https://github.com/sesethumngxozana-ui)
