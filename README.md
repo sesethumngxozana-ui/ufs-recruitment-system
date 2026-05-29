@@ -28,11 +28,11 @@ class diagrams, sequence diagrams, state charts, and project management plan.
  React, Node.js, etc.
 
 ## 👨‍💻 Team
-Mngxozana Sesethu 2023420041
-Neku Likhona 2020561359
-Nkosi Darell 2024735843
-Ramaru Ompha 2024436434
-Bera Vuyolwethu 2021447459
-Diseko Katleho 2023686260
+- Mngxozana Sesethu 2023420041
+- Neku Likhona 2020561359
+- Nkosi Darell 2024735843
+- Ramaru Ompha 2024436434
+- Bera Vuyolwethu 2021447459
+- Diseko Katleho 2023686260
 
 Supervisor: Dr. R. Fouché — University of the Free State, 2025
