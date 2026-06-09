@@ -47,13 +47,13 @@ function Navbar() {
             className="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-white text-sm"
             style={{ background: 'var(--color-ufs-green)' }}
           >
-            SS
+            UC
           </div>
           <span
             className="font-bold text-lg tracking-tight"
             style={{ color: 'var(--color-ufs-text)' }}
           >
-            Skill<span style={{ color: 'var(--color-ufs-gold)' }}>Stack</span>
+            Uni<span style={{ color: 'var(--color-ufs-gold)' }}>Connect</span>
           </span>
         </Link>
 
@@ -69,7 +69,7 @@ function Navbar() {
             <li key={label}>
               <Link
                 to={path}
-                className="text-sm font-medium no-underline transition-colors duration-200"
+                className="text-base font-medium no-underline transition-colors duration-200"
                 style={{
                   color: isActive(path)
                     ? 'var(--color-ufs-gold)'     // gold if current page
@@ -85,32 +85,14 @@ function Navbar() {
         </ul>
 
         {/* ===== CTA BUTTONS ===== */}
-        <div className="hidden md:flex items-center gap-3">
-          <Link
-            to="/login"
-            className="text-sm font-medium px-4 py-2 rounded-lg no-underline transition-all duration-200"
-            style={{
-              color: 'var(--color-ufs-text)',
-              border: '1px solid var(--color-ufs-border)',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.borderColor = 'var(--color-ufs-green)')}
-            onMouseLeave={e => (e.currentTarget.style.borderColor = 'var(--color-ufs-border)')}
-          >
-            Sign In
-          </Link>
-          <Link
-            to="/register"
-            className="text-sm font-bold px-4 py-2 rounded-lg no-underline transition-all duration-200"
-            style={{
-              background: 'var(--color-ufs-green)',
-              color: 'white',
-            }}
-            onMouseEnter={e => (e.currentTarget.style.opacity = '0.85')}
-            onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
-          >
-            Get Started
-          </Link>
-        </div>
+ <div className="hidden md:flex items-center gap-3">
+  <Link to="/login" className="nav-btn-signin">
+    Sign In
+  </Link>
+  <Link to="/register" className="nav-btn-getstarted">
+    Get Started
+  </Link>
+</div>
 
         {/* ===== MOBILE HAMBURGER ===== */}
         <button
