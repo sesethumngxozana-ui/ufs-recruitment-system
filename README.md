@@ -1,38 +1,73 @@
-# UFS Recruitment System (SkillStack)
+# React + TypeScript + Vite
 
-A web-based recruitment platform designed to bridge the gap between 
-UFS students and employers through verified credentials, skill matching, 
-and intelligent job discovery.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Features
-- Student & Employer registration with role-based access
-- SkillStack portfolio management with skill tags & badges
-- CV Builder tool
-- Skill Gap Analysis
-- Job posting & application system
-- Interview scheduling
-- Academic record access requests
-- Admin analytics dashboard
-- Support chatbot
+Currently, two official plugins are available:
 
-## 👥 System Users
-- **Students** – build profiles, apply for jobs, manage interviews
-- **Employers** – post jobs, search candidates, schedule interviews
-- **Administrators** – manage accounts, view analytics
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 📄 Documentation
-Full specification available in `/docs` — includes use cases, CRC cards, 
-class diagrams, sequence diagrams, state charts, and project management plan.
+## React Compiler
 
-## 🛠️ Tech Stack
- React, Node.js, etc.
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## 👨‍💻 Team
-- Mngxozana Sesethu 2023420041
-- Neku Likhona 2020561359
-- Nkosi Darell 2024735843
-- Ramaru Ompha 2024436434
-- Bera Vuyolwethu 2021447459
-- Diseko Katleho 2023686260
+## Expanding the ESLint configuration
 
-Supervisor: Dr. R. Fouché — University of the Free State, 2025
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
+
+You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+```
