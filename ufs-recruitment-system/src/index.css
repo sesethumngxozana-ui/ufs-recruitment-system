@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ===== UFS SKILLSTACK DESIGN SYSTEM ===== */
+/* These CSS variables are your brand colors, available everywhere */
+
+:root {
+  /* UFS Brand */
+  --color-ufs-green:   #007A4D;   /* primary — UFS green */
+  --color-ufs-gold:    #FFB81C;   /* accent — UFS gold  */
+  --color-ufs-dark:    #0D1117;   /* backgrounds        */
+  --color-ufs-surface: #161B22;   /* cards, panels      */
+  --color-ufs-border:  #30363D;   /* subtle borders     */
+  --color-ufs-text:    #E6EDF3;   /* body text          */
+  --color-ufs-muted:   #8B949E;   /* secondary text     */
+
+  /* Spacing & shape */
+  --radius-card: 12px;
+  --radius-btn:  8px;
+}
+
+/* ===== GLOBAL RESETS ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--color-ufs-dark);
+  color: var(--color-ufs-text);
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== SCROLLBAR (matches dark theme) ===== */
+::-webkit-scrollbar        { width: 6px; }
+::-webkit-scrollbar-track  { background: var(--color-ufs-dark); }
+::-webkit-scrollbar-thumb  { background: var(--color-ufs-border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-ufs-muted); }
