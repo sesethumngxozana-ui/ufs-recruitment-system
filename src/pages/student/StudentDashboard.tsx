@@ -1,4 +1,5 @@
-function StudentDashboard() {
-  return <div style={{ color: 'white', padding: '2rem' }}><h1>Student Dashboard</h1></div>
-}
-export default StudentDashboard
+import { Route, Routes } from 'react-router-dom'
+import DashboardLayout from '../../components/layout/DashboardLayout'
+import Overview from './sections/Overview'; import SkillStack from './sections/SkillStack'; import CVBuilder from './sections/CVBuilder'; import JobBoard from './sections/JobBoard'; import Applications from './sections/Applications'; import InterviewSchedule from './sections/InterviewSchedule'
+const links=[{to:'/student',label:'Dashboard',end:true},{to:'/student/skillstack',label:'My SkillStack'},{to:'/student/cv-builder',label:'CV Builder'},{to:'/student/jobs',label:'Job Board'},{to:'/student/applications',label:'My Applications'},{to:'/student/interviews',label:'Interview Schedule'},{to:'/student/settings',label:'Settings'}]
+export default function StudentDashboard(){return <Routes><Route element={<DashboardLayout role="Student" links={links}/>}><Route index element={<Overview/>}/><Route path="skillstack" element={<SkillStack/>}/><Route path="cv-builder" element={<CVBuilder/>}/><Route path="jobs" element={<JobBoard/>}/><Route path="applications" element={<Applications/>}/><Route path="interviews" element={<InterviewSchedule/>}/><Route path="settings" element={<Overview/>}/></Route></Routes>}

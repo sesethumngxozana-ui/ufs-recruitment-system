@@ -1,4 +1,5 @@
-function LoginPage() {
-  return <div style={{ color: 'white', padding: '2rem' }}><h1>Login</h1></div>
-}
-export default LoginPage
+import { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { Field, Input, buttonStyle } from '../../components/ui/common'
+export default function LoginPage() { const [role,setRole]=useState('student'); const navigate=useNavigate(); return <div style={{minHeight:'100vh',display:'grid',placeItems:'center',padding:'24px',background:'var(--color-ufs-dark)'}}><motion.div initial={{opacity:0,y:24}} animate={{opacity:1,y:0}} style={{width:'min(440px,100%)',padding:'34px',background:'var(--color-ufs-surface)',border:'1px solid var(--color-ufs-border)',borderRadius:'16px',display:'grid',gap:'20px'}}><div style={{textAlign:'center'}}><div style={{fontWeight:800,fontSize:'clamp(1.7rem,4vw,2.1rem)'}}>Uni<span style={{color:'var(--color-ufs-gold)'}}>Connect</span></div><span style={{color:'var(--color-ufs-muted)',fontSize:'.9rem'}}>Your next opportunity starts here</span></div><div style={{display:'flex',gap:'7px'}}>{['student','employer','admin'].map(r=><button key={r} onClick={()=>setRole(r)} style={{...buttonStyle,flex:1,padding:'9px',background:role===r?'var(--color-ufs-green)':'var(--color-ufs-dark)',border:'1px solid var(--color-ufs-border)',textTransform:'capitalize'}}>{r}</button>)}</div><Field label="Email"><Input type="email" placeholder="you@example.com" /></Field><Field label="Password"><Input type="password" placeholder="••••••••" /></Field><button onClick={()=>navigate(`/${role}`)} style={{...buttonStyle,width:'100%'}}>Sign In</button><p style={{textAlign:'center',color:'var(--color-ufs-muted)',fontSize:'.9rem'}}>Don’t have an account? <Link to="/register" style={{color:'var(--color-ufs-gold)'}}>Register</Link></p></motion.div></div> }

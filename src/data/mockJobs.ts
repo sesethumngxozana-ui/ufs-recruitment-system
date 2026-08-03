@@ -1,0 +1,9 @@
+import type { Job } from '../types'
+export const mockJobs: Job[] = [
+ { id:'j1', employerId:'e1', companyName:'AfriNova', title:'Graduate Software Engineer', description:'Build useful digital services with a collaborative product team.', requirements:['React','TypeScript','Git'], location:'Bloemfontein', type:'full-time', salary:'R280 000 – R360 000', postedAt:'2026-07-28', deadline:'2026-08-30', status:'open' },
+ { id:'j2', employerId:'e2', companyName:'Standard Bank', title:'Data Analytics Intern', description:'Turn business data into clear, actionable insights.', requirements:['Python','SQL','Power BI'], location:'Johannesburg', type:'internship', postedAt:'2026-07-25', deadline:'2026-08-22', status:'open' },
+ { id:'j3', employerId:'e3', companyName:'Deloitte', title:'Audit Associate', description:'Join a high-performing assurance team.', requirements:['Accounting','Excel'], location:'Bloemfontein', type:'full-time', postedAt:'2026-07-20', deadline:'2026-08-18', status:'open' },
+ { id:'j4', employerId:'e4', companyName:'Mediclinic', title:'Research Assistant', description:'Support clinical research projects and reporting.', requirements:['Research','Statistics'], location:'Cape Town', type:'part-time', postedAt:'2026-07-18', deadline:'2026-08-14', status:'open' },
+ { id:'j5', employerId:'e5', companyName:'Old Mutual', title:'UX Design Intern', description:'Help create accessible financial experiences.', requirements:['Figma','User research'], location:'Cape Town', type:'internship', postedAt:'2026-07-15', deadline:'2026-08-25', status:'open' },
+ { id:'j6', employerId:'e6', companyName:'Legal Aid SA', title:'Candidate Attorney', description:'Contribute to access-to-justice work.', requirements:['LLB','Legal writing'], location:'Bloemfontein', type:'contract', postedAt:'2026-07-12', deadline:'2026-08-20', status:'open' }
+]

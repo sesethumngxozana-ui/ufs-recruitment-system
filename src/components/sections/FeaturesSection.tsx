@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { section } from 'framer-motion/m'
+//import { section } from 'framer-motion/m'
 
 const features = [
   {

@@ -1,50 +1,13 @@
-import { useCallback } from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
-import Particles from '@tsparticles/react'
-import { loadSlim } from '@tsparticles/slim'
-import type { Engine } from '@tsparticles/engine'
 
 function HeroSection() {
-  const particlesInit = useCallback(async (engine: Engine) => {
-    await loadSlim(engine)
-  }, [])
-
   return (
     <section
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
       style={{ background: 'var(--color-ufs-dark)' }}
     >
-      <Particles
-        id="hero-particles"
-        init={particlesInit}
-        className="absolute inset-0 z-0"
-        options={{
-          background: { color: { value: 'transparent' } },
-          fpsLimit: 60,
-          particles: {
-            number: { value: 60, density: { enable: true } },
-            color: { value: ['#007A4D', '#FFB81C', '#30363D'] },
-            links: {
-              enable: true,
-              color: '#30363D',
-              distance: 150,
-              opacity: 0.4,
-              width: 1,
-            },
-            move: {
-              enable: true,
-              speed: 0.8,
-              direction: 'none',
-              outModes: { default: 'bounce' },
-            },
-            opacity: { value: 0.6 },
-            shape: { type: 'circle' },
-            size: { value: { min: 1, max: 3 } },
-          },
-          detectRetina: true,
-        }}
-      />
+      <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(circle at 50% 35%, rgba(0,122,77,.17), transparent 48%)' }} />
 
       <div
         className="absolute bottom-0 left-0 right-0 h-32 z-10"
